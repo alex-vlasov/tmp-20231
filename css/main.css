@@ -1,22 +1,33 @@
 body {
   margin: 0;
+  font-family: 'Mulish', sans-serif;
 }
 
-#header {
+.header {
   height: 84px;
   display: flex;
   flex-wrap: nowrap;
-  /*overflow: hidden;*/
+  width: 100%;
+  gap: 60px;
 }
 
-#header-menu {
+.header div {
+  flex-wrap: nowrap;
+}
+
+.header .menu-logo {
+  display: flex;
+  gap: 28px;
+}
+
+.header .menu {
   margin-top: 30px;
   margin-left: 32px;
   width: 20px;
   height: 17px;
 }
 
-.header-menu-stroke {
+.header .menu .menu-stroke {
   width: 18px;
   height: 1px;
   background-color: #1F2022;
@@ -25,19 +36,17 @@ body {
   margin-top: 4px;
 }
 
-#header-logo {
+.header .logo {
   width: 116px;
   height: 25px;
-  background-image: url("../img/logo.png");
+  background-image: url('../img/logo.png');
   background-size: 116px;
   margin-top: 30px;
-  margin-left: 28px;
 }
 
-#header-search {
+.header .search {
   flex-grow: 1;
   margin-top: 20px;
-  margin-left: 60px;
   padding-left: 22px;
   height: 44px;
   max-width: 830px;
@@ -45,17 +54,13 @@ body {
   border-radius: 22px;
 }
 
-.header-spacer {
-  flex-grow: 1;
-}
-
-#header-search-icon {
+.header .search .search-icon {
   float: right;
   margin-right: 22px;
   margin-top: 12.5px;
 }
 
-#header-search input {
+.header .search input {
   height: 44px;
   width: calc(100% - 22px - 19px);
   border: none;
@@ -66,27 +71,66 @@ body {
   color: #30384C;
 }
 
-#header-search input:focus {
+.header .search input:focus {
   outline: none;
 }
 
-#header-userpic {
-  float: right;
+.header .icons {
+  display: flex;
+  flex-grow: 1;
+  justify-content: right;
+  gap: 50px;
+  margin-top: 22px;
+  margin-right: 70px;
+}
+
+.icons .camera, .icons .apps {
+  margin-top: 10px;
+}
+
+.icons .notifications {
+  margin-top: 7px;
+}
+
+.header .icons .userpic {
   width: 40px;
   height: 40px;
-  background-image: url("../img/userpic.png");
+  background-image: url('../img/userpic.png');
   background-size: 40px;
   border-radius: 20px;
-  margin-right: 70px;
-  margin-top: 22px;
 }
 
 
-#menu {
+.menu {
   width: 230px;
   float: left;
+  color: #898989;
 }
 
-#main {
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-left: 31px;
+  line-height: 48px;
+  vertical-align: top;
+}
+
+.menu li {
+  padding-left: 34px;
+}
+
+.menu li:hover {
+  color: #FF0000;
+  cursor: pointer;
+}
+
+.menu .menu-main > li.home{
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image:url('../img/menu/home.svg');
+}
+
+.main {
   width: auto;
 }
