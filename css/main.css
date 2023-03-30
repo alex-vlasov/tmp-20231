@@ -4,6 +4,8 @@ body {
   /* background-image: url('../img/background-home.png'); */
 }
 
+/* HEADER */
+
 .header {
   height: 84px;
   display: flex;
@@ -101,6 +103,7 @@ body {
   border-radius: 20px;
 }
 
+/* SIDEBAR */
 
 .menu {
   width: 230px;
@@ -113,8 +116,12 @@ body {
   padding-left: 0;
   margin-top: 16px;
   margin-left: 31px;
-  line-height: 48px;
+  line-height: 48.5px;
   vertical-align: top;
+}
+
+.menu ul.secondary {
+  margin-top: 33px;
 }
 
 .menu li {
@@ -140,6 +147,40 @@ body {
   width: 34px;
   height: 20px;
 }
+
+.menu .subscriptions {
+  margin-top: 45px;
+  margin-left: 30px;
+}
+
+.menu .subscriptions h3 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu .subscriptions ul {
+  margin-left: 0;
+}
+
+.menu .subscriptions ul li {
+  gap: 10px;
+}
+
+.menu .subscriptions ul > li div:first-of-type {
+  width: 26px;
+  height: 26px;
+}
+
+.menu .subscriptions ul img {
+  width: 26px;
+  height: 26px;
+  margin-top: 13px;
+  margin-right: 10px;
+  border-radius: 13px;
+}
+
+/* CONTENTS */
 
 .main {
   width: auto;
