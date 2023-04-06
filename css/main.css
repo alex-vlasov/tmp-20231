@@ -113,6 +113,21 @@ body {
   margin-top: 7px;
 }
 
+.icons .notifications .unread {
+  width: 18px;
+  height: 18px;
+  background-color: #FF0000;
+  font-weight: bold;
+  font-size: 12px;
+  color: #FFF;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 9px;
+  position: relative;
+  top: -35px;
+  left: 9px;
+}
+
 .header .icons .userpic {
   width: 40px;
   height: 40px;
