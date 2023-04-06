@@ -138,7 +138,7 @@ body {
 
 /* SIDEBAR */
 
-.menu {
+body > .menu {
   /* position: fixed; */
   /* top: 84px; */
   width: 230px;
@@ -146,19 +146,23 @@ body {
   color: #898989;
   margin-left: 31px;
   /* overflow: scroll; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 16px;
 }
 
 .menu ul {
   list-style: none;
   padding-left: 0;
   padding-top: 0;
-  margin-top: 16px;
+  margin: 0;
   line-height: 49px;
   vertical-align: top;
 }
 
 .menu ul.secondary {
-  margin-top: 33px;
+  /* margin-top: 33px; */
 }
 
 .menu li {
@@ -191,7 +195,7 @@ body {
 }
 
 .menu .subscriptions {
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .menu .subscriptions h3 {
@@ -219,6 +223,26 @@ body {
   margin-top: 13px;
   border-radius: 13px;
 }
+
+.menu .settings {
+  display: flex;
+  gap: 15px;
+}
+
+.menu .settings:hover {
+  cursor: pointer;
+  color: #F00;
+}
+
+.menu .settings svg path {
+  opacity: 0.24;
+}
+
+.menu .settings:hover svg path {
+  opacity: 1;
+  fill: #FF0000;
+}
+
 
 /* CONTENTS */
 
