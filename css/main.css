@@ -1,6 +1,12 @@
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Mulish', sans-serif;
+  display: flex;
+  flex-direction: column;
   /* background-image: url('../img/background-home.png'); */
 }
 
@@ -138,18 +144,16 @@ body {
 
 /* SIDEBAR */
 
-body > .menu {
-  /* position: fixed; */
-  /* top: 84px; */
+.main .menu {
   width: 230px;
-  float: left;
   color: #898989;
   margin-left: 31px;
-  /* overflow: scroll; */
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-top: 16px;
+  padding-bottom: 30px;
+  overflow-y: auto;
 }
 
 .menu ul {
@@ -159,10 +163,6 @@ body > .menu {
   margin: 0;
   line-height: 49px;
   vertical-align: top;
-}
-
-.menu ul.secondary {
-  /* margin-top: 33px; */
 }
 
 .menu li {
@@ -192,10 +192,6 @@ body > .menu {
 .menu ul > li svg {
   /* width: 34px; */
   height: 20px;
-}
-
-.menu .subscriptions {
-  /* margin-top: 45px; */
 }
 
 .menu .subscriptions h3 {
@@ -244,8 +240,12 @@ body > .menu {
 }
 
 
-/* CONTENTS */
+/* MAIN BOX */
 
 .main {
-  width: auto;
+  flex-grow: 1;
+  display: flex;
+  overflow-y: hidden;
 }
+
+/* CONTENTS */
