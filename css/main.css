@@ -258,7 +258,7 @@ body {
   overflow-x: hidden;
 }
 
-.contents .channel {
+.contents .channel, .contents .recommended {
   overflow-x: hidden;
 }
 
@@ -266,14 +266,14 @@ body {
   width: 100%;
 }
 
-.contents .channel .channel-header {
+.contents .channel-header, .contents .recommended-header {
   display: flex;
   justify-content: space-between;
   margin-right: 150px;
   margin-bottom: 5px;
 }
 
-.contents .channel .channel-header h2 {
+.contents .channel-header h2 {
   display: flex;
   gap: 14px;
   font-size: 26px;
@@ -281,29 +281,29 @@ body {
   white-space: nowrap;
 }
 
-.contents .channel .channelpic img {
+.contents .channelpic img {
   border-radius: 25px;
   width: 50px;
   height: 50px;
 }
 
-.contents .channel .channel-header .channel-navigation {
-  padding-top: 49px;
+.contents .channel-navigation {
+  padding-top: 23px;
   display: flex;
   gap: 8px;
 }
 
-.contents .channel .channel-header .channel-navigation .navigate-left svg {
+.contents .channel-navigation .navigate-left svg {
   position: relative;
   left: -2px;
 }
 
-.contents .channel .channel-header .channel-navigation .navigate-right svg {
+.contents .channel-navigation .navigate-right svg {
   position: relative;
   left: 1px;
 }
 
-.contents .channel .channel-header .channel-navigation > div {
+.contents .channel-navigation > div {
   width: 28px;
   height: 28px;
   background-color: #C2C2C2;
@@ -312,11 +312,15 @@ body {
   cursor: pointer;
 }
 
-.contents .channel .channel-header .channel-navigation svg {
+.contents .channel-navigation > div:hover {
+  background-color: #F00;
+}
+
+.contents .channel-navigation svg {
   padding-top: 8px;
 }
 
-.contents .channel ul.videos {
+.contents ul.videos {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -325,16 +329,25 @@ body {
   overflow-x: hidden;
 }
 
-.contents .channel .videos .preview {
-  width: 250px;
-  height: 150px;
+.contents .videos .preview {
   border-radius: 14px;
   background-position: center;
-  background-size: 250px;
   cursor: pointer;
 }
 
-.contents .channel .videos .time {
+.contents .channel .videos .preview {
+  width: 250px;
+  height: 150px;
+  background-size: 250px;
+}
+
+.contents .recommended .videos .preview {
+  width: 540px;
+  height: 250px;
+  background-size: 540px;
+}
+
+.contents .videos .time {
   width: 47px;
   height: 24px;
   color: #FFF;
@@ -344,11 +357,23 @@ body {
   text-align: center;
   line-height: 24px;
   position: relative;
+}
+
+.contents .channel .videos .time {
   top: 119px;
   right: -196px;
 }
 
-.contents .channel .videos h6 {
+.contents .recommended .videos .time {
+  top: 219px;
+  right: -486px;
+}
+
+.contents .videos .preview:hover .time {
+  background-color: #F00;  
+}
+
+.contents .videos h6 {
   font-size: 16px;
   font-weight: 700;
   margin-top: 10px;
@@ -356,37 +381,41 @@ body {
   cursor: pointer;
 }
 
-.contents .channel .videos .info {
+.contents .videos .info {
   display: flex;
   justify-content: space-between;
   color: #C2C2C2;
   font-size: 13px;
 }
 
-.contents .channel .videos .info .channel {
+.contents .videos .info .channel {
   cursor: pointer;
 }
 
-.videos .video1 .preview {
+.channel .videos .video1 .preview {
   background-image: url('../img/videos/video1.png');
 }
 
-.videos .video2 .preview {
+.channel .videos .video2 .preview {
   background-image: url('../img/videos/video2.png');
 }
 
-.videos .video3 .preview {
+.channel .videos .video3 .preview {
   background-image: url('../img/videos/video3.png');
 }
 
-.videos .video4 .preview {
+.channel .videos .video4 .preview {
   background-image: url('../img/videos/video4.png');
 }
 
-.videos .video5 .preview {
+.channel .videos .video5 .preview {
   background-image: url('../img/videos/video5.png');
 }
 
-.videos .video6 .preview {
+.channel .videos .video6 .preview {
   background-image: url('../img/videos/video6.png');
+}
+
+.recommended .videos .video1 .preview {
+  background-image: url('../img/recommended/video1.png');
 }
