@@ -162,13 +162,11 @@ body {
   padding-top: 0;
   margin: 0;
   line-height: 49px;
-  vertical-align: top;
 }
 
 .menu li {
   padding-left: 0;
   display: flex;
-  gap: 14px;
 }
 
 .menu li svg {
@@ -189,8 +187,8 @@ body {
   opacity: 1;
 }
 
-.menu ul > li svg {
-  /* width: 34px; */
+.menu ul > li div {
+  width: 34px;
   height: 20px;
 }
 
@@ -255,11 +253,12 @@ body {
   flex-direction: column;
   padding-top: 12px;
   padding-left: 10px;
-  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 31px;
 }
 
 .contents .channel, .contents .recommended {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .contents > div {
@@ -418,4 +417,12 @@ body {
 
 .recommended .videos .video1 .preview {
   background-image: url('../img/recommended/video1.png');
+}
+
+.recommended .videos .video2 .preview {
+  background-image: url('../img/recommended/video2.png');
+}
+
+.recommended .videos .video3 .preview {
+  background-image: url('../img/recommended/video3.png');
 }
