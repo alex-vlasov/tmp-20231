@@ -249,3 +249,173 @@ body {
 }
 
 /* CONTENTS */
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-left: 10px;
+  overflow-x: hidden;
+}
+
+.contents .channel, .contents .recommended {
+  overflow-x: hidden;
+}
+
+.contents > div {
+  width: 100%;
+}
+
+.contents .channel-header, .contents .recommended-header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+  margin-bottom: 5px;
+}
+
+.contents .channel-header h2 {
+  display: flex;
+  gap: 14px;
+  font-size: 26px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.contents .channelpic img {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.contents .channel-navigation {
+  padding-top: 23px;
+  display: flex;
+  gap: 8px;
+}
+
+.contents .channel-navigation .navigate-left svg {
+  position: relative;
+  left: -2px;
+}
+
+.contents .channel-navigation .navigate-right svg {
+  position: relative;
+  left: 1px;
+}
+
+.contents .channel-navigation > div {
+  width: 28px;
+  height: 28px;
+  background-color: #C2C2C2;
+  text-align: center;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.contents .channel-navigation > div:hover {
+  background-color: #F00;
+}
+
+.contents .channel-navigation svg {
+  padding-top: 8px;
+}
+
+.contents ul.videos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  overflow-x: hidden;
+}
+
+.contents .videos .preview {
+  border-radius: 14px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.contents .channel .videos .preview {
+  width: 250px;
+  height: 150px;
+  background-size: 250px;
+}
+
+.contents .recommended .videos .preview {
+  width: 540px;
+  height: 250px;
+  background-size: 540px;
+}
+
+.contents .videos .time {
+  width: 47px;
+  height: 24px;
+  color: #FFF;
+  background-color: #B2B2B2;
+  font-size: 14px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 24px;
+  position: relative;
+}
+
+.contents .channel .videos .time {
+  top: 119px;
+  right: -196px;
+}
+
+.contents .recommended .videos .time {
+  top: 219px;
+  right: -486px;
+}
+
+.contents .videos .preview:hover .time {
+  background-color: #F00;  
+}
+
+.contents .videos h6 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.contents .videos .info {
+  display: flex;
+  justify-content: space-between;
+  color: #C2C2C2;
+  font-size: 13px;
+}
+
+.contents .videos .info .channel {
+  cursor: pointer;
+}
+
+.channel .videos .video1 .preview {
+  background-image: url('../img/videos/video1.png');
+}
+
+.channel .videos .video2 .preview {
+  background-image: url('../img/videos/video2.png');
+}
+
+.channel .videos .video3 .preview {
+  background-image: url('../img/videos/video3.png');
+}
+
+.channel .videos .video4 .preview {
+  background-image: url('../img/videos/video4.png');
+}
+
+.channel .videos .video5 .preview {
+  background-image: url('../img/videos/video5.png');
+}
+
+.channel .videos .video6 .preview {
+  background-image: url('../img/videos/video6.png');
+}
+
+.recommended .videos .video1 .preview {
+  background-image: url('../img/recommended/video1.png');
+}
