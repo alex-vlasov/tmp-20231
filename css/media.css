@@ -1,0 +1,61 @@
+
+@media (max-width: 610px) {
+    .icons .camera {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 530px) {
+    .icons .apps {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .icons .notifications {
+      display: none;
+    }
+  }
+
+  
+@media (max-width: 660px) {
+    .header .menu {
+      display: none;
+    }
+  }
+  
+/* SIDEBAR */
+
+@media (max-width: 1100px) {
+    .main .menu {
+        display: none;
+    }
+} 
+
+@media (max-width: 1300px) {
+    .main .menu {
+        width: 96px;
+    }
+
+    .main .menu .subscriptions h3 {
+        display: none;
+    }
+}
+
+/* CONTENTS */
+@media (max-width: 500px) {
+    .contents .recommended, .contents .recommended-topic, .contents .channel .channel-header {
+      display: none;
+    }
+  
+    .contents .channel .videos {
+      flex-direction: column;
+    }
+
+    .contents .channel .videos .preview img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 250/150;
+    }
+  }
+  
