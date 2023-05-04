@@ -30,7 +30,7 @@
     .main .menu {
         display: none;
     }
-} 
+}
 
 @media (max-width: 1300px) {
     .main .menu {
@@ -44,6 +44,10 @@
 
 /* CONTENTS */
 @media (max-width: 500px) {
+  .main {
+    flex-direction: column;
+  }
+
     .contents .recommended, .contents .recommended-topic, .contents .channel .channel-header {
       display: none;
     }
@@ -59,3 +63,8 @@
     }
   }
   
+@media (min-width: 500px) {
+  .main .menu-mobile {
+    display: none;
+  }
+}
