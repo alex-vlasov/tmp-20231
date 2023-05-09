@@ -354,16 +354,13 @@ body {
   cursor: pointer;
 }
 
-.contents .videos .preview img {
+.preview img {
   border-radius: 14px;
-}
-
-.contents .channel .videos .preview img, .contents .recommended-topic .videos .preview img {
   width: 250px;
   height: 150px;
 }
 
-.contents .recommended .videos .preview img {
+.recommended .preview img {
   width: 540px;
   height: 250px;
 }
@@ -385,7 +382,7 @@ body {
   left: calc( 100% - 55px );
 }
 
-.contents .videos .preview:hover .time {
+.preview:hover .time {
   background-color: #F00;  
 }
 
