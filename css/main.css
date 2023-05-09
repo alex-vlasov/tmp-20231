@@ -37,12 +37,6 @@ body {
   height: 17px;
 }
 
-@media (max-width: 660px), (pointer:none), (pointer:coarse) {
-  .header .menu {
-    display: none;
-  }
-}
-
 .header .menu:hover {
   cursor: pointer;
 }
@@ -116,26 +110,8 @@ body {
   opacity: 1;
 }
 
-.icons .camera, .icons .apps {
+.icons .camera, .icons .apps, .icons .search-mobile {
   margin-top: 10px;
-}
-
-@media (max-width: 610px), (pointer:none), (pointer:coarse) {
-  .icons .camera {
-    display: none;
-  }
-}
-
-@media (max-width: 530px), (pointer:none), (pointer:coarse) {
-  .icons .apps {
-    display: none;
-  }
-}
-
-@media (max-width: 460px), (pointer:none), (pointer:coarse) {
-  .icons .notifications {
-    display: none;
-  }
 }
 
 .icons .notifications {
@@ -169,27 +145,26 @@ body {
 
 .main .menu {
   width: 230px;
-  color: #898989;
   margin-left: 31px;
+  margin-right: 31px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-top: 16px;
   padding-bottom: 30px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
-@media (max-width: 655px), (pointer:none), (pointer:coarse) {
-  .main .menu {
-    display: none;
-  }
-}
-
-.menu ul {
+.main .menu ul, .main .menu-mobile ul {
+  color: #898989;
   list-style: none;
   padding-left: 0;
   padding-top: 0;
   margin: 0;
+}
+
+.menu ul {
   line-height: 49px;
 }
 
@@ -205,16 +180,16 @@ body {
   margin-top: 16px;
 }
 
-.menu li:hover {
+.menu li:hover, .menu-mobile li:hover {
   color: #FF0000;
   cursor: pointer;
 }
 
-.menu li svg path {
+.menu li svg path, .menu-mobile li svg path {
   opacity: 0.24;
 }
 
-.menu li:hover svg path {
+.menu li:hover svg path, .menu-mobile li:hover svg path {
   fill: #FF0000;
   opacity: 1;
 }
@@ -228,12 +203,6 @@ body {
   color: #000000;
   font-size: 18px;
   font-weight: bold;
-}
-
-@media (max-width: 1050px) {
-  .menu .subscriptions h3 {
-    display: none;
-  }
 }
 
 .menu .subscriptions ul {
@@ -275,6 +244,26 @@ body {
   fill: #FF0000;
 }
 
+/* MOBILE MENU */
+.main .menu-mobile {
+  border-top: 1px solid #F1F1F1;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.main .menu-mobile ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main .menu-mobile li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /* MAIN BOX */
 
@@ -289,10 +278,9 @@ body {
 .contents {
   display: flex;
   flex-direction: column;
-  padding-top: 12px;
-  padding-left: 10px;
   overflow-y: auto;
   gap: 31px;
+  padding: 12px 10px 0px 10px;
 }
 
 .contents > div {
@@ -363,21 +351,18 @@ body {
 }
 
 .contents .videos .preview {
-  border-radius: 14px;
-  background-position: center;
   cursor: pointer;
 }
 
-.contents .channel .videos .preview, .contents .recommended-topic .videos .preview {
+.preview img {
+  border-radius: 14px;
   width: 250px;
   height: 150px;
-  background-size: 250px;
 }
 
-.contents .recommended .videos .preview {
+.recommended .preview img {
   width: 540px;
   height: 250px;
-  background-size: 540px;
 }
 
 .contents .videos .time {
@@ -392,32 +377,12 @@ body {
   position: relative;
 }
 
-/* Mobile contents */
-@media (max-width: 500px), (pointer:none), (pointer:coarse) {
-  .contents {
-    overflow-y: inherit;
-  }
-
-  .contents .recommended, .contents .recommended-topic, .contents .channel .channel-header {
-    display: none;
-  }
-
-  .contents .channel .videos {
-    flex-direction: column;
-  }
+.contents .videos .time {
+  top: -34px;
+  left: calc( 100% - 55px );
 }
 
-.contents .channel .videos .time, .contents .recommended-topic .videos .time {
-  top: 119px;
-  right: -196px;
-}
-
-.contents .recommended .videos .time {
-  top: 219px;
-  right: -486px;
-}
-
-.contents .videos .preview:hover .time {
+.preview:hover .time {
   background-color: #F00;  
 }
 
@@ -438,42 +403,6 @@ body {
 
 .contents .videos .info .channel {
   cursor: pointer;
-}
-
-.channel .videos .video1 .preview, .recommended-topic .videos .video1 .preview {
-  background-image: url('../img/videos/video1.png');
-}
-
-.channel .videos .video2 .preview, .recommended-topic .videos .video2 .preview {
-  background-image: url('../img/videos/video2.png');
-}
-
-.channel .videos .video3 .preview, .recommended-topic .videos .video3 .preview {
-  background-image: url('../img/videos/video3.png');
-}
-
-.channel .videos .video4 .preview, .recommended-topic .videos .video4 .preview {
-  background-image: url('../img/videos/video4.png');
-}
-
-.channel .videos .video5 .preview, .recommended-topic .videos .video5 .preview {
-  background-image: url('../img/videos/video5.png');
-}
-
-.channel .videos .video6 .preview, .recommended-topic .videos .video6 .preview {
-  background-image: url('../img/videos/video6.png');
-}
-
-.recommended .videos .video1 .preview {
-  background-image: url('../img/recommended/video1.png');
-}
-
-.recommended .videos .video2 .preview {
-  background-image: url('../img/recommended/video2.png');
-}
-
-.recommended .videos .video3 .preview {
-  background-image: url('../img/recommended/video3.png');
 }
 
 .recommended-topic .channel-header .recommended-topic-note {
