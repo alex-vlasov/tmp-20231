@@ -10,6 +10,12 @@ body {
   /* background-image: url('../img/background-home.png'); */
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* HEADER */
 
 .header {
@@ -37,7 +43,7 @@ body {
   height: 17px;
 }
 
-.header .menu:hover {
+.header .menu:hover, .secondary-menu li:hover, .channel-main .recommended li:hover {
   cursor: pointer;
 }
 
@@ -101,11 +107,11 @@ body {
   margin-right: 56px;
 }
 
-.header .icons > div:hover {
+.header .icons > div:hover, .buttons .icon:hover {
   cursor: pointer;
 }
 
-.header .icons > div:hover svg path {
+.header .icons > div:hover svg path, .buttons .icon:hover svg path {
   fill: #FF0000;
   opacity: 1;
 }
@@ -158,10 +164,6 @@ body {
 
 .main .menu ul, .main .menu-mobile ul {
   color: #898989;
-  list-style: none;
-  padding-left: 0;
-  padding-top: 0;
-  margin: 0;
 }
 
 .menu ul {
@@ -203,10 +205,6 @@ body {
   color: #000000;
   font-size: 18px;
   font-weight: bold;
-}
-
-.menu .subscriptions ul {
-  margin-left: 0;
 }
 
 .menu .subscriptions ul li {
@@ -281,6 +279,7 @@ body {
   overflow-y: auto;
   gap: 31px;
   padding: 12px 10px 0px 10px;
+  flex-grow: 2;
 }
 
 .contents > div {
@@ -342,7 +341,6 @@ body {
 }
 
 .contents ul.videos {
-  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -350,7 +348,7 @@ body {
   overflow-x: hidden;
 }
 
-.contents .videos .preview {
+.preview {
   cursor: pointer;
 }
 
@@ -365,7 +363,7 @@ body {
   height: 250px;
 }
 
-.contents .videos .time {
+.contents .videos .time, .preview .time {
   width: 47px;
   height: 24px;
   color: #FFF;
@@ -377,7 +375,7 @@ body {
   position: relative;
 }
 
-.contents .videos .time {
+.contents .videos .time, .preview .time {
   top: -34px;
   left: calc( 100% - 55px );
 }
@@ -423,7 +421,7 @@ body {
   gap: 25px;
 }
 
-.channel-header .subscribe-navigation .subscribe-button {
+.subscribe-button {
   background-color: #F00;
   color: #FFF;
   height: 40px;
@@ -435,3 +433,140 @@ body {
   margin-top: 17px;
   cursor: pointer;
 }
+
+/* CHANNEL PAGE */
+.channel-header-image {
+  border-radius: 14px;
+}
+
+.channel-pic {
+  width: 80px;
+  border-radius: 40px;
+}
+
+.channel-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.channel-name {
+  display: flex;
+  gap: 20px;
+}
+
+.channel-name-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.channel-name-text .name {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.channel-name-text .details {
+  color: #C2C2C2;
+  font-size: 13px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons .icon {
+  margin-top: 25px;
+}
+
+.secondary-menu {
+  display: flex;
+  gap: 69px;
+  font-size: 18px;
+  height: 25px;
+}
+
+.secondary-menu svg {
+  margin-top: 2px;
+}
+
+.secondary-menu .active, .secondary-menu li:hover, .secondary-menu li:hover svg path {
+  font-weight: bold;
+  color: #F00;
+  border-bottom: 2px solid #F00;
+  fill: #F00;
+}
+
+.channel-main {
+  display: flex;
+}
+
+.channel-details {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.top-video {
+  display: flex;
+  gap: 30px;
+}
+
+.top-video .preview {
+  width: 540px;
+}
+
+.top-video .preview img {
+  width: auto;
+  height: 250px;
+}
+
+.top-video .text {
+  width: 550px;
+}
+
+.top-video h2 {
+  max-width: 430px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.top-video p {
+  color: #666666;
+}
+
+.top-video .views {
+  color: #C2C2C2;
+}
+
+.recommended h6 {
+  margin-top: 0;
+  color: #C2C2C2;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.channel-main .recommended ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #19202C;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.channel-main .recommended li {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.channel-main .recommended li:hover {
+  color: #F00;
+}
+
+.channel-main .recommended img {
+  width: 50px;
+  border-radius: 25px;
+}
+
