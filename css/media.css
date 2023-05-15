@@ -68,7 +68,7 @@
 /* CONTENTS */
 @media (max-width: 500px) {
 
-  .contents .recommended, .contents .recommended-topic, .contents .channel .channel-header {
+  .contents .recommended, .contents .recommended-topic, .contents .channel .channel-header, .top-video {
     display: none;
   }
 
@@ -80,5 +80,18 @@
     width: 100%;
     height: auto;
     aspect-ratio: 250/150;
+  }
+}
+
+/* CHANNEL PAGE */
+@media (max-width: 1500px) {
+  .recommended {
+    display: none;
+  }
+}
+
+@media (max-width: 890px) {
+  .top-video {
+    flex-direction: column;
   }
 }

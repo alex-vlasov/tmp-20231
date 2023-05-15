@@ -484,6 +484,7 @@ ul {
   gap: 69px;
   font-size: 18px;
   height: 25px;
+  flex-wrap: wrap;
 }
 
 .secondary-menu svg {
@@ -522,7 +523,7 @@ ul {
 }
 
 .top-video .text {
-  width: 550px;
+  max-width: 550px;
 }
 
 .top-video h2 {
