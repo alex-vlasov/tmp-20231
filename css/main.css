@@ -492,6 +492,11 @@ ul {
   margin-top: 2px;
 }
 
+.secondary-menu .more {
+  margin-top: 8px;
+  display: none;
+}
+
 .secondary-menu .active, .secondary-menu li:hover, .secondary-menu li:hover svg path {
   font-weight: bold;
   color: #F00;
@@ -582,4 +587,10 @@ ul {
 .logo-mobile {
   margin-top: 10px;
   display: none;
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

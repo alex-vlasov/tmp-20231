@@ -113,6 +113,14 @@
     flex-direction: column;
   }
 
+  .secondary-menu .optional {
+    display: none;
+  }
+
+  .secondary-menu .more {
+    display: inherit;
+  }
+
   .menu-logo h2 {
     display: inherit;
   }
@@ -127,5 +135,32 @@
 
   .channel-page .menu-logo .menu {
     display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .channel-title {
+    flex-direction: column;
+  }
+
+  .channel-title .icon {
+    display: none;
+  }
+
+  .channel-header-image {
+    border-radius: 0;
+  }
+
+  .channel-name {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .channel-pic {
+    width: 70px;
+    border-radius: 35px;
+    position: relative;
+    top: -70px;
+    margin-bottom: -70px;
   }
 }
