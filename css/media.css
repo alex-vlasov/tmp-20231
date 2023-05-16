@@ -6,9 +6,21 @@
     display: none;
   }
 }
-  
+
+@media (max-width: 700px) {
+  .channel-page .icons .camera {
+    display: none;
+  }
+}
+
 @media (max-width: 530px) {
   .icons .apps {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .channel-page .icons .apps {
     display: none;
   }
 }
@@ -18,7 +30,13 @@
     display: none;
   }
 }
-  
+
+@media (max-width: 550px) {
+  .channel-page .icons .notifications {
+    display: none;
+  }
+}
+
 @media (max-width: 660px) {
   .header .menu {
     display: none;
@@ -93,5 +111,21 @@
 @media (max-width: 890px) {
   .top-video {
     flex-direction: column;
+  }
+
+  .menu-logo h2 {
+    display: inherit;
+  }
+
+  .logo-mobile {
+    display: inherit;
+  }
+
+  .channel-page .logo {
+    display: none;
+  }
+
+  .channel-page .menu-logo .menu {
+    display: none;
   }
 }

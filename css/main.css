@@ -460,9 +460,10 @@ ul {
   justify-content: center;
 }
 
-.channel-name-text .name {
+.channel-name-text h2 {
   font-size: 26px;
   font-weight: 700;
+  margin: 0;
 }
 
 .channel-name-text .details {
@@ -571,3 +572,14 @@ ul {
   border-radius: 25px;
 }
 
+.menu-logo h2 {
+  margin: 0;
+  display: none;
+  white-space: nowrap;
+  margin-top: 8px;
+}
+
+.logo-mobile {
+  margin-top: 10px;
+  display: none;
+}
