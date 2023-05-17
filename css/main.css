@@ -170,7 +170,7 @@ ul {
   line-height: 49px;
 }
 
-.menu li {
+.menu li, .menu a {
   padding-left: 0;
   display: flex;
   max-height: 49px;
@@ -178,11 +178,16 @@ ul {
   overflow: hidden;
 }
 
+.menu a {
+  text-decoration: none;
+  color: #898989;
+}
+
 .menu li svg {
   margin-top: 16px;
 }
 
-.menu li:hover, .menu-mobile li:hover {
+.menu li:hover, .menu-mobile li:hover, .menu a:active, .menu li:hover a {
   color: #FF0000;
   cursor: pointer;
 }
@@ -207,7 +212,7 @@ ul {
   font-weight: bold;
 }
 
-.menu .subscriptions ul li {
+.menu .subscriptions ul a {
   gap: 10px;
 }
 
