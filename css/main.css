@@ -599,3 +599,16 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
+
+.video-page .preview img {
+  width: 367px;
+  height: auto;
+}
+
+.video-page .main {
+  gap: 20px;
+}
+
+.video-page .main .videos {
+  margin-right: 10px;
+}
