@@ -389,7 +389,7 @@ ul {
   background-color: #F00;  
 }
 
-.contents .videos h6 {
+.videos h6 {
   font-size: 16px;
   font-weight: 700;
   margin-top: 10px;
@@ -397,14 +397,14 @@ ul {
   cursor: pointer;
 }
 
-.contents .videos .info {
+.videos .info {
   display: flex;
   justify-content: space-between;
   color: #C2C2C2;
   font-size: 13px;
 }
 
-.contents .videos .info .channel {
+.videos .info .channel {
   cursor: pointer;
 }
 
@@ -449,7 +449,7 @@ ul {
   border-radius: 40px;
 }
 
-.channel-title {
+.channel-title, .video-description, .video-details {
   display: flex;
   justify-content: space-between;
 }
@@ -547,7 +547,7 @@ ul {
   color: #666666;
 }
 
-.top-video .views {
+.views {
   color: #C2C2C2;
 }
 
@@ -598,4 +598,78 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.video-page .preview img {
+  width: 367px;
+  height: auto;
+}
+
+.video-page .main {
+  gap: 20px;
+}
+
+.video-page .main .videos {
+  margin-right: 10px;
+}
+
+/* PLAYER PAGE */
+.videos h3 {
+  font-size: 36px;
+}
+
+.videos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.videos-header {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.autoplay {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.player img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.video-page .contents {
+  gap: 5px;
+}
+
+.video-page .contents h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.video-page .contents .views {
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.actions .action {
+  padding: 10px;
+  background-color: #FAFAFA;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.video-page .videos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
